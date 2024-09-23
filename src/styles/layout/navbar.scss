@@ -1,0 +1,22 @@
+@import '../base/colors.scss';
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &__ulist:hover {
+    border-bottom: 2px solid $cp-pink-400;
+    transition: all 0.1s;
+  }
+
+  &__link {
+    color: $cp-pink-400;
+    background: $cp-grey-200;
+    text-decoration: none;
+    &:hover {
+      color: $cp-pink-300;
+    }
+  }
+}

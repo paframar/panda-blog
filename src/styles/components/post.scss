@@ -1,0 +1,78 @@
+@import '../base/colors.scss';
+
+.post-card {
+  border-left: 2px solid $cp-pink-200;
+  padding: 20px;
+  background-color: $cp-white-50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 30px 0 rgba(220, 215, 215, 0.5);
+  border-radius: 5px;
+
+  &__title {
+    color: $cp-blue-50;
+    text-transform: uppercase;
+  }
+
+  &__user {
+    color: $cp-grey-400;
+  }
+  &__description {
+    color: $cp-grey-500;
+  }
+  &__actions {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+  }
+  &__no-posts-message {
+    color: $cp-pink-200;
+    &__emoji {
+      font-size: 28px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.post-card-placeholder {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: $cp-white-100;
+  border-left: 2px solid $cp-grey-100;
+  border-radius: 5px;
+  box-shadow: 0 0 30px 0 rgba(220, 215, 215, 0.5);
+  opacity: 0.5;
+
+  &__item {
+    background-color: $cp-grey-100;
+    animation: 1s ease infinite pulse;
+    color: transparent;
+  }
+
+  @keyframes pulse {
+    0% {
+      background: $cp-grey-100;
+    }
+
+    25% {
+      background: darken($cp-grey-100, 10%);
+    }
+
+    50% {
+      background: $cp-grey-100;
+    }
+  }
+}

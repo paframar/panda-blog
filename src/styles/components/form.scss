@@ -1,0 +1,59 @@
+@import '../base/colors.scss';
+
+.form {
+  background-color: $cp-white-50;
+  border-radius: 5px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding: 1.2rem;
+  &__link,
+  &__link:visited {
+    color: $cp-pink-200;
+  }
+  &__link:hover {
+    color: $cp-pink-300;
+  }
+
+  &__input {
+    border: 1px solid $cp-pink-300;
+    background-color: $cp-white-100;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: $cp-grey-400;
+    width: 60%;
+  }
+  &__input:focus {
+    background-color: $cp-white-50;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $cp-grey-100;
+  }
+
+  &:has(button) {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    font-weight: 500;
+  }
+
+  &__error {
+    font-size: 0.9rem;
+    color: $cp-pink-400;
+    text-align: right;
+    width: 100%;
+  }
+}

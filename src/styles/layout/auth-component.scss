@@ -1,0 +1,15 @@
+@import '../base/colors.scss';
+
+.auth-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  &__welcome {
+    color: $cp-pink-400;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}

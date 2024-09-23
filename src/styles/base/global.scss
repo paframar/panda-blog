@@ -1,0 +1,32 @@
+@import './colors.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    $cp-pink-200,
+    $cp-pink-400
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}

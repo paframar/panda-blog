@@ -1,0 +1,27 @@
+.layout-container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  background-color: $cp-white-50;
+  border-radius: 30px;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 50vh;
+
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'sidebar content'
+    'sidebar content'
+    'footer footer';
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: auto 1fr;
+  @media only screen and (max-width: 800px) {
+    margin: 0 auto;
+    grid-template-areas:
+      'header '
+      'sidebar'
+      'content'
+      'footer ';
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+}

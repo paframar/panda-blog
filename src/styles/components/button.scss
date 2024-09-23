@@ -1,0 +1,87 @@
+@import '../base/colors.scss';
+
+@mixin button-type($type) {
+  @if $type == primary {
+    padding: 10px;
+    color: $cp-white-300;
+    background-color: $cp-pink-200;
+    &:hover {
+      background-color: $cp-pink-300;
+    }
+  } @else if $type == secondary {
+    padding: 10px;
+    color: $cp-pink-400;
+    background: $cp-grey-200;
+    border: 1px solid $cp-pink-400;
+
+    &:hover {
+      background-color: $cp-pink-200;
+      color: $cp-pink-50;
+    }
+  } @else if $type == transp {
+    color: transparent;
+    background: transparent;
+  } @else if $type == link {
+    width: 100%;
+    color: $cp-white-100;
+    background: transparent;
+    border-style: none;
+    text-align: left;
+  }
+}
+@mixin icon-type($type) {
+  @if $type == primary {
+    color: $cp-pink-100;
+    &:hover {
+      color: $cp-pink-300;
+    }
+  } @else if $type == secondary {
+    color: $cp-grey-400;
+    &:hover {
+      color: $cp-blue-50;
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  &--primary {
+    @include button-type(primary);
+  }
+
+  &--secondary {
+    @include button-type(secondary);
+  }
+
+  &--transparent {
+    @include button-type(transp);
+  }
+
+  &--link {
+    @include button-type(link);
+  }
+
+  &--danger {
+    @include button-type(danger);
+  }
+
+  &__icon {
+    color: $cp-white-50;
+    width: 100%;
+
+    &--primary {
+      @include icon-type(primary);
+    }
+
+    &--secondary {
+      @include icon-type(secondary);
+    }
+
+    &--danger {
+      @include icon-type(danger);
+    }
+  }
+}

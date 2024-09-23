@@ -1,0 +1,24 @@
+@import '../base/colors.scss';
+.footer {
+  grid-area: footer;
+  padding: 20px;
+  background-color: $cp-white-50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: $cp-grey-400;
+  font-size: 12px;
+  &__link {
+    transition: all 0.3s;
+    color: $cp-pink-200;
+    &:visited {
+      color: $cp-pink-200;
+    }
+    &:hover {
+      color: $cp-pink-300;
+      letter-spacing: 1px;
+    }
+  }
+}
